@@ -3,13 +3,9 @@
 import type React from "react";
 import { useEffect, useRef } from "react";
 
-import { Inter } from "next/font/google";
-
-import "./globals.css";
-import "./styles.scss";
-import variables from "./variables.module.scss";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.css";
+import "@/styles/styles.scss";
+import variables from "@/styles/variables.module.scss";
 
 export default function RootLayout({
   children
@@ -36,9 +32,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body ref={ref} className={inter.className}>
-        {children}
-      </body>
+      <body ref={ref}>{children}</body>
     </html>
   );
 }

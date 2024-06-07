@@ -4,5 +4,8 @@
     "next",
     "eslint:recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off"
+  }
 }
