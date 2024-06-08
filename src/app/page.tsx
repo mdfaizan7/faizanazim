@@ -3,7 +3,8 @@
 import Sidebar from "@/components/Sidebar";
 import AboutMe from "@/components/AboutMe";
 import SocialLinks from "@/components/SocialLinks";
-import Experience from "../components/Experience";
+import Experience from "@/components/Experience";
+import Writings from "@/components/Writings";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
           <AboutMe />
           <Experience />
+          <Writings />
         </main>
       </div>
     </div>

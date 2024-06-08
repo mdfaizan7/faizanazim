@@ -1,45 +1,38 @@
 "use client";
 
 import React from "react";
-import {
-  DevIcon,
-  GithubIcon,
-  GmailIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon
-} from "./common/Icons";
+import * as Icons from "@/components/common/Icons";
 
 const SOCIAL_LINK_DATA = [
   {
     name: "Github",
     link: "https://github.com/mdfaizan7",
-    icon: GithubIcon
+    icon: Icons.GithubIcon
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/mdfaizan7/",
-    icon: LinkedInIcon
+    icon: Icons.LinkedInIcon
   },
   {
     name: "G-Mail",
     link: "mailto:faizaanazim@gmail.com",
-    icon: GmailIcon
+    icon: Icons.GmailIcon
   },
   {
     name: "Dev.to",
     link: "https://dev.to/mdfaizan7",
-    icon: DevIcon
+    icon: Icons.DevIcon
   },
   {
     name: "X",
     link: "https://x.com/md_faizan7",
-    icon: XIcon
+    icon: Icons.XIcon
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/md.faizanazim/",
-    icon: InstagramIcon
+    icon: Icons.InstagramIcon
   }
 ];
 

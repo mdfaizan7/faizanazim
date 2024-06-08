@@ -13,8 +13,8 @@ const MENU_ITEMS = [
     hash: "experience"
   },
   {
-    label: "Projects",
-    hash: "projects"
+    label: "Writings",
+    hash: "writings"
   }
 ];
 
@@ -54,7 +54,7 @@ const Sidebar = () => {
       <nav className="nav hidden lg:block">
         <ul className="mt-16 w-max">
           {MENU_ITEMS.map((item) => (
-            <li key={item.hash}>
+            <li key={item.hash} className={hash === item.hash ? "active" : ""}>
               <SidebarMenu
                 label={item.label}
                 selected={hash === item.hash}

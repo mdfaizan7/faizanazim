@@ -21,7 +21,7 @@ export default function RootLayout({
 
     ref.current.style.setProperty(
       "background",
-      `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, ${variables.gradiantcolor}, transparent 75%)`
+      `radial-gradient(600px at ${e.pageX}px ${e.pageY}px, ${variables.gradiantcolor}, transparent 75%)`
     );
   };
 
