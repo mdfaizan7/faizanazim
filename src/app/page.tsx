@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 import Sidebar from "@/components/Sidebar";
@@ -6,8 +7,8 @@ import AboutMe from "@/components/AboutMe";
 import SocialLinks from "@/components/SocialLinks";
 import Experience from "@/components/Experience";
 import Writings from "@/components/Writings";
-import useElementOnScreen from "../components/common/UseElementOnScreen";
-import { useDebounce } from "../components/common/useDebounce";
+import useElementOnScreen from "@/hooks/UseElementOnScreen";
+import useDebounce from "@/hooks/useDebounce";
 
 export default function Home() {
   const [section, setSection] = useState("");

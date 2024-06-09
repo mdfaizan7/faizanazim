@@ -1,7 +1,6 @@
 "use client";
 
-import type React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import "@/styles/globals.css";
 import "@/styles/styles.scss";
@@ -10,7 +9,7 @@ import variables from "@/styles/variables.module.scss";
 export default function RootLayout({
   children
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   const ref = useRef<HTMLBodyElement>(null);
 

@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useEffect, type Dispatch, type SetStateAction } from "react";
-import SidebarMenu from "./SidebarMenu";
 import Link from "next/link";
+
+import SidebarMenu from "./SidebarMenu";
 
 const MENU_ITEMS = [
   {

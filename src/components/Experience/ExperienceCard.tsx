@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { ArrowLinkIcon } from "@/components/common/Icons";
 import Link from "next/link";
+
+import { ArrowLinkIcon } from "@/components/common/Icons";
 
 export interface ExperienceCardProps {
   duration: string;
