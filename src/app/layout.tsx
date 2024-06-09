@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
+import { Lato as Font } from "next/font/google";
 
 import "@/styles/globals.css";
 import "@/styles/styles.scss";
 import variables from "@/styles/variables.module.scss";
+
+const font = Font({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"]
+});
 
 export default function RootLayout({
   children
@@ -31,7 +37,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body ref={ref}>{children}</body>
+      <body ref={ref} className={font.className}>
+        {children}
+      </body>
     </html>
   );
 }

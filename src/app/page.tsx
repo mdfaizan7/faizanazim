@@ -13,7 +13,7 @@ import useDebounce from "@/hooks/useDebounce";
 export default function Home() {
   const [section, setSection] = useState("");
 
-  const [aboutRef, aboutVisibility] = useElementOnScreen({ threshold: [0] });
+  const [aboutRef, aboutVisibility] = useElementOnScreen({ threshold: [0.4] });
   const [expRef, expVisibility] = useElementOnScreen({ threshold: [0.8] });
   const [writRef, writVisibility] = useElementOnScreen({
     threshold: [0.5]
@@ -29,7 +29,7 @@ export default function Home() {
     }
   }, [expVisibility, aboutVisibility]);
 
-  const debouncedSection = useDebounce(section, 150);
+  const debouncedSection = useDebounce(section, 200);
 
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
