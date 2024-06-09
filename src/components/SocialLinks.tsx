@@ -2,6 +2,7 @@
 
 import React from "react";
 import * as Icons from "@/components/common/Icons";
+import Link from "next/link";
 
 const SOCIAL_LINK_DATA = [
   {
@@ -41,7 +42,7 @@ const SocialLinks = () => {
     <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
       {SOCIAL_LINK_DATA.map((it) => (
         <li className="mr-5" key={it.link}>
-          <a
+          <Link
             className="block hover:text-slate-200 transition-all hover:scale-[115%]"
             href={it.link}
             target="_blank"
@@ -50,7 +51,7 @@ const SocialLinks = () => {
           >
             <span className="sr-only">{it.name}</span>
             <it.icon />
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

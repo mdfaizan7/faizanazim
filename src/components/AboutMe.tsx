@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import Link from "next/link";
 
 const AboutMe = () => {
   return (
@@ -16,36 +16,36 @@ const AboutMe = () => {
       <p className="mb-4">
         Somewhere around 2020, I jumped into coding, and it's been quite the
         journey. From{" "}
-        <a
+        <Link
           className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
           href="https://www.getpowerplay.in/"
           target="__blank"
           rel="noreferrer noopener"
         >
           startups
-        </a>{" "}
+        </Link>{" "}
         to a{" "}
-        <a
+        <Link
           className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
           href="https://about.google/"
           target="__blank"
           rel="noreferrer noopener"
         >
           major corporation
-        </a>
+        </Link>
         , I've been exploring different tech worlds and loving every bit of it.
       </p>
 
       <p className="mb-4">
         Currently, I'm working at{" "}
-        <a
+        <Link
           className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
           href="https://developers.google.com/"
           target="__blank"
           rel="noreferrer noopener"
         >
           Google
-        </a>
+        </Link>
         , dedicated to streamlining the developer experience. We're
         brainstorming exciting projects aimed at helping developers not only
         succeed but also enjoy the process!

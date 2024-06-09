@@ -20,12 +20,8 @@ body {
   color: #134e4a;
 }
 
-:focus {
+a:focus-visible {
   outline: 2px solid #5eead4;
   outline-offset: 4px;
   border-radius: 2px;
-}
-
-.active {
-  font-weight: bold;
 }

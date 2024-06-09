@@ -1,7 +1,8 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { ArrowLinkIcon } from "@/components/common/Icons";
-import Image from "next/image";
 
 export interface WritingCardProps {
   name: string;
@@ -26,7 +27,7 @@ const WritingCard = (props: WritingCardProps) => {
       <div className="z-10 col-span-6">
         <p className="-mt-1 text-sm font-semibold leading-6">{date}</p>
         <h3 className="-mt-1">
-          <a
+          <Link
             className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
             href={link}
             target="_blank"
@@ -40,7 +41,7 @@ const WritingCard = (props: WritingCardProps) => {
                 <ArrowLinkIcon />
               </span>
             </span>
-          </a>
+          </Link>
         </h3>
       </div>
     </div>
