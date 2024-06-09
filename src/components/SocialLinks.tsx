@@ -16,16 +16,6 @@ const SOCIAL_LINK_DATA = [
     icon: Icons.LinkedInIcon
   },
   {
-    name: "G-Mail",
-    link: "mailto:faizaanazim@gmail.com",
-    icon: Icons.GmailIcon
-  },
-  {
-    name: "Dev.to",
-    link: "https://dev.to/mdfaizan7",
-    icon: Icons.DevIcon
-  },
-  {
     name: "X",
     link: "https://x.com/md_faizan7",
     icon: Icons.XIcon
@@ -34,6 +24,16 @@ const SOCIAL_LINK_DATA = [
     name: "Instagram",
     link: "https://www.instagram.com/md.faizanazim/",
     icon: Icons.InstagramIcon
+  },
+  {
+    name: "Dev.to",
+    link: "https://dev.to/mdfaizan7",
+    icon: Icons.DevIcon
+  },
+  {
+    name: "G-Mail",
+    link: "mailto:faizaanazim@gmail.com",
+    icon: Icons.GmailIcon
   }
 ];
 

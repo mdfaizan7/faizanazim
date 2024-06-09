@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
-import { ArrowLinkIcon } from "@/components/common/Icons";
+import CustomLink from "@/components/common/CustomLink";
 
 export interface WritingCardProps {
   name: string;
@@ -28,21 +27,7 @@ const WritingCard = (props: WritingCardProps) => {
       <div className="z-10 col-span-6">
         <p className="-mt-1 text-sm font-semibold leading-6">{date}</p>
         <h3 className="-mt-1">
-          <Link
-            className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Integrating Algolia Search with WordPress Multisite (opens in a new tab)"
-          >
-            <span className="absolute -inset-x-10 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-            <span>
-              {name}
-              <span className="inline-block">
-                <ArrowLinkIcon />
-              </span>
-            </span>
-          </Link>
+          <CustomLink text={name} href={link} />
         </h3>
       </div>
     </div>

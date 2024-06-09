@@ -5,31 +5,37 @@ import { useEffect, useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import AboutMe from "@/components/AboutMe";
 import SocialLinks from "@/components/SocialLinks";
-import Experience from "@/components/Experience";
-import Writings from "@/components/Writings";
 import useElementOnScreen from "@/hooks/UseElementOnScreen";
 import useDebounce from "@/hooks/useDebounce";
+import CustomList from "@/components/common/CustomList";
+import ExperienceCard from "@/components/ExperienceCard";
+import WritingCard from "@/components/WritingCard";
+import { EXPERIENCE_DATA_LIST } from "@/components/data/experience_data";
+import { WRITING_DATA_LIST } from "@/components/data/writings_data";
+import ProjectCard from "../components/ProjectCard";
+import { PROJECT_DATA_LIST } from "../components/data/projects_data";
 
 export default function Home() {
   const [section, setSection] = useState("");
 
   const [aboutRef, aboutVisibility] = useElementOnScreen({ threshold: [0.4] });
   const [expRef, expVisibility] = useElementOnScreen({ threshold: [0.8] });
-  const [writRef, writVisibility] = useElementOnScreen({
-    threshold: [0.5]
-  });
+  const [projRef, projVisibility] = useElementOnScreen({ threshold: [0.6] });
+  const [writRef, writVisibility] = useElementOnScreen({ threshold: [0] });
 
   useEffect(() => {
     if (aboutVisibility) {
       setSection("about");
     } else if (expVisibility) {
       setSection("experience");
+    } else if (projVisibility) {
+      setSection("projects");
     } else if (writVisibility) {
       setSection("writings");
     }
-  }, [expVisibility, aboutVisibility]);
+  }, [expVisibility, aboutVisibility, projVisibility, writVisibility]);
 
-  const debouncedSection = useDebounce(section, 200);
+  const debouncedSection = useDebounce(section, 300);
 
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -44,10 +50,31 @@ export default function Home() {
             <AboutMe />
           </div>
           <div ref={expRef}>
-            <Experience />
+            <CustomList
+              CardComponent={ExperienceCard}
+              data={EXPERIENCE_DATA_LIST}
+              dataKey="companyName"
+              sectionId="experience"
+              sectionName="Experience"
+            />
+          </div>
+          <div ref={projRef}>
+            <CustomList
+              CardComponent={ProjectCard}
+              data={PROJECT_DATA_LIST}
+              dataKey="name"
+              sectionId="projects"
+              sectionName="Projects"
+            />
           </div>
           <div ref={writRef}>
-            <Writings />
+            <CustomList
+              CardComponent={WritingCard}
+              data={WRITING_DATA_LIST}
+              dataKey="name"
+              sectionId="writings"
+              sectionName="Writings"
+            />
           </div>
         </main>
       </div>

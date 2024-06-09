@@ -37,6 +37,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <title>{"Faizan"}</title>
+
       <body ref={ref} className={font.className}>
         {children}
       </body>

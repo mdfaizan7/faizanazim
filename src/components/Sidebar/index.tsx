@@ -15,6 +15,10 @@ const MENU_ITEMS = [
     hash: "experience"
   },
   {
+    label: "Projects",
+    hash: "projects"
+  },
+  {
     label: "Writings",
     hash: "writings"
   }

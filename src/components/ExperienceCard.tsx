@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
-
-import { ArrowLinkIcon } from "@/components/common/Icons";
+import CustomLink from "@/components/common/CustomLink";
 
 export interface ExperienceCardProps {
   duration: string;
@@ -24,23 +22,10 @@ const ExperienceCard = (props: ExperienceCardProps) => {
       </header>
       <div className="z-10 sm:col-span-8">
         <h3 className="font-medium leading-snug text-slate-200">
-          <div>
-            <Link
-              className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-              href={companyHomePage}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-              <span>
-                {position} ·{" "}
-                <span className="inline-block">
-                  {companyName}
-                  <ArrowLinkIcon />
-                </span>
-              </span>
-            </Link>
-          </div>
+          <CustomLink
+            href={companyHomePage}
+            text={`${position} · ${companyName}`}
+          />
         </h3>
         <p className="mt-2 text-sm leading-normal">{description}</p>
       </div>

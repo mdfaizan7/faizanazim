@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import CustomLink from "./common/CustomLink";
 
 const AboutMe = () => {
   return (
@@ -16,36 +16,27 @@ const AboutMe = () => {
       <p className="mb-4">
         Somewhere around 2020, I jumped into coding, and it's been quite the
         journey. From{" "}
-        <Link
-          className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
+        <CustomLink
           href="https://www.getpowerplay.in/"
-          target="__blank"
-          rel="noreferrer noopener"
-        >
-          startups
-        </Link>{" "}
+          text="startups"
+          suppressIcon
+        />{" "}
         to a{" "}
-        <Link
-          className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
+        <CustomLink
           href="https://about.google/"
-          target="__blank"
-          rel="noreferrer noopener"
-        >
-          major corporation
-        </Link>
+          text="major corporation"
+          suppressIcon
+        />
         , I've been exploring different tech worlds and loving every bit of it.
       </p>
 
       <p className="mb-4">
         Currently, I'm working at{" "}
-        <Link
-          className="font-medium text-slate-200 hover:text-teal-400 focus-visible:text-teal-400"
+        <CustomLink
           href="https://developers.google.com/"
-          target="__blank"
-          rel="noreferrer noopener"
-        >
-          Google
-        </Link>
+          text="Google"
+          suppressIcon
+        />
         , dedicated to streamlining the developer experience. We're
         brainstorming exciting projects aimed at helping developers not only
         succeed but also enjoy the process!
