@@ -20,8 +20,8 @@ export default function Home() {
 
   const [aboutRef, aboutVisibility] = useElementOnScreen({ threshold: [0.4] });
   const [expRef, expVisibility] = useElementOnScreen({ threshold: [0.8] });
-  const [projRef, projVisibility] = useElementOnScreen({ threshold: [0.7] });
-  const [writRef, writVisibility] = useElementOnScreen({ threshold: [0.1] });
+  const [projRef, projVisibility] = useElementOnScreen({ threshold: [1] });
+  const [writRef, writVisibility] = useElementOnScreen({ threshold: [0] });
 
   useEffect(() => {
     if (aboutVisibility) {

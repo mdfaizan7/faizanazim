@@ -30,7 +30,8 @@ const AboutMe = () => {
         , I've been exploring different tech worlds and loving every bit of it.
       </p>
 
-      <p className="mb-4">
+      {/* TODO: uncomment when joining google */}
+      {/* <p className="mb-4">
         Currently, I'm working at{" "}
         <CustomLink
           href="https://developers.google.com/"
@@ -40,7 +41,7 @@ const AboutMe = () => {
         , dedicated to streamlining the developer experience. We're
         brainstorming exciting projects aimed at helping developers not only
         succeed but also enjoy the process!
-      </p>
+      </p> */}
 
       <p className="mb-4">
         When I'm not coding, you'll find me hitting the gym, diving into
