@@ -46,7 +46,7 @@ export default function RootLayout({
     );
   };
 
-  const onMouseHover = (e: any) => {
+  const onMouseHover = () => {
     const $bigBall = document.querySelector(".cursor__ball--big");
     const $smallBall = document.querySelector(".cursor__ball--small");
     console.log("here");
@@ -64,7 +64,7 @@ export default function RootLayout({
     });
   };
 
-  const onMouseHoverOut = (e: any) => {
+  const onMouseHoverOut = () => {
     const $bigBall = document.querySelector(".cursor__ball--big");
     const $smallBall = document.querySelector(".cursor__ball--small");
 
