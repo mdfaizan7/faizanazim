@@ -53,7 +53,7 @@ const Sidebar = (props: Props) => {
       <h1 className="text-4xl font-bold text-slate-200 tracking-tight sm:text-5xl">
         <Link href="https://faizanazim.com">{"Mohammad Faizan Azim"}</Link>
       </h1>
-      <h2 className="mt-3 text-lg font-medium text-slate-200 tracking-tight sm:text-xl">
+      <h2 className="mt-3 text-lg font-medium text-slate-200 tracking-wide sm:text-xl">
         {"Full Stack Engineer"}
       </h2>
 
