@@ -43,7 +43,7 @@ const SocialLinks = () => {
       {SOCIAL_LINK_DATA.map((it) => (
         <li className="mr-5" key={it.link}>
           <Link
-            className="block hover:text-slate-200 transition-all hover:scale-[115%]"
+            className="block non-hoverable hover:text-slate-200 transition-all hover:scale-[115%]"
             href={it.link}
             target="_blank"
             rel="noreferrer noopener"
