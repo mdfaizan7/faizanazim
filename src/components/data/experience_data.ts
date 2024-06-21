@@ -19,7 +19,7 @@ export const EXPERIENCE_DATA_LIST: ExperienceCardProps[] = [
     companyHomePage: "https://www.linkedin.com/company/spation/about/",
     companyName: "Spation",
     description: `Led the creation of their MVP. Created a product for alpha testing under 2 weeks. Developed an open-source donation platform for Italian restaurants.  Optimized performance by over 50% using webpack.`,
-    duration: "May 2020 - Dec 2020",
+    duration: "May 2020 - Nov 2020",
     position: "Full Stack Intern"
   }
 ];
