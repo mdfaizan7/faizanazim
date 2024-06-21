@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Lato as Font } from "next/font/google";
+import gsap from "gsap";
 
 import "@/styles/globals.css";
 import "@/styles/styles.scss";
 import variables from "@/styles/variables.module.scss";
-import gsap from "gsap";
 
 const font = Font({
   subsets: ["latin"],
@@ -18,13 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const ref = useRef<HTMLBodyElement>(null);
-
   const updateMousePosition = (e: MouseEvent) => {
-    if (!ref.current) {
-      return;
-    }
-
     const $bigBall = document.querySelector(".cursor__ball--big");
     const $smallBall = document.querySelector(".cursor__ball--small");
 
@@ -37,19 +31,17 @@ export default function RootLayout({
     gsap.to($smallBall, {
       x: e.x - 5,
       y: e.y - 5,
-      duration: 0.1
+      duration: 0
     });
-
-    ref.current.style.setProperty(
-      "background",
-      `radial-gradient(600px at ${e.pageX}px ${e.pageY}px, ${variables.gradiantcolor}, transparent 75%)`
-    );
+    gsap.to(document.body, {
+      background: `radial-gradient(600px at ${e.pageX}px ${e.pageY}px, ${variables.gradiantcolor}, transparent 75%)`,
+      duration: 0
+    });
   };
 
   const onMouseHover = () => {
     const $bigBall = document.querySelector(".cursor__ball--big");
     const $smallBall = document.querySelector(".cursor__ball--small");
-    console.log("here");
 
     gsap.to($bigBall, {
       scale: 2,
@@ -91,7 +83,13 @@ export default function RootLayout({
       $hoverables[i].addEventListener("mouseleave", onMouseHoverOut);
     }
 
-    return () => window.removeEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+      for (let i = 0; i < $hoverables.length; i++) {
+        $hoverables[i].removeEventListener("mouseenter", onMouseHover);
+        $hoverables[i].removeEventListener("mouseleave", onMouseHoverOut);
+      }
+    };
   }, []);
 
   return (
@@ -115,7 +113,7 @@ export default function RootLayout({
         href="/favicon-16x16.png"
       />
 
-      <body ref={ref} className={font.className}>
+      <body className={font.className}>
         <div className="cursor">
           <div className="cursor__ball cursor__ball--big">
             <svg height="30" width="30">
