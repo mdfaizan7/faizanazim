@@ -1,6 +1,6 @@
 "use client";
 
-// import CustomLink from "./common/CustomLink";
+import CustomLink from "./common/CustomLink";
 
 const AboutMe = () => {
   return (
@@ -15,8 +15,7 @@ const AboutMe = () => {
       </div>
       <p className="mb-4">
         Somewhere around 2020, I jumped into coding, and it's been quite the
-        journey.
-        {/* From{" "}
+        journey. From{" "}
         <CustomLink
           href="https://www.getpowerplay.in/"
           text="startups"
@@ -28,11 +27,10 @@ const AboutMe = () => {
           text="major corporation"
           suppressIcon
         />
-        , I've been exploring different tech worlds and loving every bit of it. */}
+        , I've been exploring different tech worlds and loving every bit of it.
       </p>
 
-      {/* TODO: uncomment when joining google */}
-      {/* <p className="mb-4">
+      <p className="mb-4">
         Currently, I'm working at{" "}
         <CustomLink
           href="https://developers.google.com/"
@@ -42,7 +40,7 @@ const AboutMe = () => {
         , dedicated to streamlining the developer experience. We're
         brainstorming exciting projects aimed at helping developers not only
         succeed but also enjoy the process!
-      </p> */}
+      </p>
 
       <p className="mb-4">
         When I'm not coding, you'll find me hitting the gym, diving into

@@ -10,7 +10,7 @@ interface Props {
 const CustomLink = (props: Props) => {
   return (
     <Link
-      className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
+      className="inline-flex hoverable items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
       target="_blank"
       rel="noreferrer noopener"
       href={props.href}

@@ -10,10 +10,10 @@ import useDebounce from "@/hooks/useDebounce";
 import CustomList from "@/components/common/CustomList";
 import ExperienceCard from "@/components/ExperienceCard";
 import WritingCard from "@/components/WritingCard";
+import ProjectCard from "@/components/ProjectCard";
 import { EXPERIENCE_DATA_LIST } from "@/components/data/experience_data";
 import { WRITING_DATA_LIST } from "@/components/data/writings_data";
-import ProjectCard from "../components/ProjectCard";
-import { PROJECT_DATA_LIST } from "../components/data/projects_data";
+import { PROJECT_DATA_LIST } from "@/components/data/projects_data";
 
 export default function Home() {
   const [section, setSection] = useState("");
